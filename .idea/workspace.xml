@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fac057c-949e-4838-b164-0f16724b61d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/stencil-library/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/stencil-library/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/stencil-library/stencil.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/stencil-library/stencil.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +50,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683205029586</updated>
-      <workItem from="1683205030852" duration="1347000" />
+      <workItem from="1683205030852" duration="1660000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
 </project>
