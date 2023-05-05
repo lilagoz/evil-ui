@@ -3,3 +3,23 @@
   position: relative;
   z-index: 100;
 }
+
+.input {
+  transition: all 500ms;
+  outline: none;
+  border: 2px solid orangered;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: larger;
+  padding: 0.5em;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  box-shadow: 10px 5px 5px pink;
+  margin: 0 1rem 1rem 0;
+
+  &:focus {
+    transition: all 500ms;
+    border: 2px solid red;
+    box-shadow: 10px 5px 5px red;
+  }
+}

@@ -11,10 +11,10 @@ export class EzInput {
     return (
       <Host>
         <slot>
-          <h1>This is the way! ⚔️ 🛡️</h1>
+          <label>This is the way! ⚔️ 🛡️</label>
+          <input type={"text"} class={"input"} />
         </slot>
       </Host>
     );
   }
-
 }

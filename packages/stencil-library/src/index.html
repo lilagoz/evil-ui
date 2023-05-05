@@ -7,8 +7,19 @@
 
     <script type="module" src="/build/stencil-library.esm.js"></script>
     <script nomodule src="/build/stencil-library.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+  <div style="display: block; height: 100%">
+    <my-component>
+      <ez-input></ez-input>
+      <h1 slot="header">This is the way 🔥</h1>
+    </my-component>
+  </div>
   </body>
 </html>
