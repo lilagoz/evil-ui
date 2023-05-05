@@ -1,3 +1,4 @@
+
 :host {
   display: block;
   height: 100%;
@@ -7,7 +8,7 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #404040;
+  background-color: $backgroundColor;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +17,8 @@
   width: 640px;
   height: 480px;
   padding: 2rem;
-  border: 5px solid orange;
-  color: orange;
-  background-color: #808080;
+  border: 5px solid $borderColor;
+  color: $textColor;
+  background-color: $panelColor;
   border-radius: 20px;
 }
