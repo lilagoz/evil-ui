@@ -13,6 +13,8 @@ export class MyComponent {
         <div class="inner">
           <slot name={"header"}/>
           <slot/>
+          <ez-input></ez-input>
+          <slot name={"footer"}/>
         </div>
       </Host>
       )
