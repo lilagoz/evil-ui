@@ -1,4 +1,4 @@
-import {Component, h, Host} from '@stencil/core';
+import { Component, h, Host, State } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
@@ -6,17 +6,25 @@ import {Component, h, Host} from '@stencil/core';
   shadow: true,
 })
 export class MyComponent {
+  @State() phoneNumber: string;
+
+  phoneNumberChanged(e: any) {
+    console.debug('my-component phoneNumberChanged', e.detail);
+    this.phoneNumber = e.detail;
+  }
 
   render() {
     return (
       <Host class="outer">
         <div class="inner">
-          <slot name={"header"}/>
-          <slot/>
-          <ez-input></ez-input>
-          <slot name={"footer"}/>
+          <slot name={'header'} />
+          <slot />
+          <evil-phonenumber-input onChange={e => this.phoneNumberChanged(e)}>Phone number</evil-phonenumber-input>
+          <pre style={{ color: '#f88' }}>evil phone number: {this.phoneNumber}</pre>
+
+          <slot name={'footer'} />
         </div>
       </Host>
-      )
+    );
   }
 }

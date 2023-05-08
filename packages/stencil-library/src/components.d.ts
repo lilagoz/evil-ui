@@ -6,12 +6,33 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface EvilPhonenumberInput {
+    }
     interface EzInput {
     }
     interface MyComponent {
     }
+    interface NumberDropdownInput {
+        "itemNumber": number;
+        "itemPrefix": string;
+        "value": string;
+    }
+}
+export interface EvilPhonenumberInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLEvilPhonenumberInputElement;
+}
+export interface NumberDropdownInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLNumberDropdownInputElement;
 }
 declare global {
+    interface HTMLEvilPhonenumberInputElement extends Components.EvilPhonenumberInput, HTMLStencilElement {
+    }
+    var HTMLEvilPhonenumberInputElement: {
+        prototype: HTMLEvilPhonenumberInputElement;
+        new (): HTMLEvilPhonenumberInputElement;
+    };
     interface HTMLEzInputElement extends Components.EzInput, HTMLStencilElement {
     }
     var HTMLEzInputElement: {
@@ -24,27 +45,48 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLNumberDropdownInputElement extends Components.NumberDropdownInput, HTMLStencilElement {
+    }
+    var HTMLNumberDropdownInputElement: {
+        prototype: HTMLNumberDropdownInputElement;
+        new (): HTMLNumberDropdownInputElement;
+    };
     interface HTMLElementTagNameMap {
+        "evil-phonenumber-input": HTMLEvilPhonenumberInputElement;
         "ez-input": HTMLEzInputElement;
         "my-component": HTMLMyComponentElement;
+        "number-dropdown-input": HTMLNumberDropdownInputElement;
     }
 }
 declare namespace LocalJSX {
+    interface EvilPhonenumberInput {
+        "onChange"?: (event: EvilPhonenumberInputCustomEvent<string>) => void;
+    }
     interface EzInput {
     }
     interface MyComponent {
     }
+    interface NumberDropdownInput {
+        "itemNumber"?: number;
+        "itemPrefix"?: string;
+        "onChange"?: (event: NumberDropdownInputCustomEvent<string>) => void;
+        "value"?: string;
+    }
     interface IntrinsicElements {
+        "evil-phonenumber-input": EvilPhonenumberInput;
         "ez-input": EzInput;
         "my-component": MyComponent;
+        "number-dropdown-input": NumberDropdownInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "evil-phonenumber-input": LocalJSX.EvilPhonenumberInput & JSXBase.HTMLAttributes<HTMLEvilPhonenumberInputElement>;
             "ez-input": LocalJSX.EzInput & JSXBase.HTMLAttributes<HTMLEzInputElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "number-dropdown-input": LocalJSX.NumberDropdownInput & JSXBase.HTMLAttributes<HTMLNumberDropdownInputElement>;
         }
     }
 }
