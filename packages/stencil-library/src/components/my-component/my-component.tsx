@@ -20,8 +20,7 @@ export class MyComponent {
           <slot name={'header'} />
           <slot />
           <evil-phonenumber-input onChange={e => this.phoneNumberChanged(e)}>Phone number</evil-phonenumber-input>
-          <pre style={{ color: '#f88' }}>evil phone number: {this.phoneNumber}</pre>
-
+          <pre style={{ color: '#f88' }}>my-component phone number: {this.phoneNumber}</pre>
           <slot name={'footer'} />
         </div>
       </Host>

@@ -40,7 +40,7 @@ export class EvilPhonenumberInput {
         <number-dropdown-input itemNumber={1000} onChange={e => this.onChangeHandler(e, 2)}></number-dropdown-input>
         <number-dropdown-input itemNumber={100} onChange={e => this.onChangeHandler(e, 3)}></number-dropdown-input>
         <number-dropdown-input itemNumber={100} onChange={e => this.onChangeHandler(e, 4)}></number-dropdown-input>
-        <pre style={{ color: '#8f8' }}>phone number: {this.value}</pre>
+        <pre style={{ color: '#8f8' }}>evil-phonenumber-input: {this.value}</pre>
       </Host>
     );
   }
