@@ -1,10 +1,12 @@
 <div class="content">
-    <form (ngSubmit)="onSubmit($event)">
+    <h1>Reactive form</h1>
+    <form>
         <div class="control-field">
-            <lib-evil-phonenumber></lib-evil-phonenumber>
+            <lib-evil-phonenumber name="Jozsi"></lib-evil-phonenumber>
         </div>
-        <div>
+        <div class="control-field">
             <button class="button">Do something 🐈</button>
         </div>
     </form>
+    <div>The phone number is:</div>
 </div>

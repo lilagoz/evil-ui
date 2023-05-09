@@ -1,1 +1,12 @@
-<p>template-driven-form works!</p>
+<div class="content">
+    <h1>Template driven form</h1>
+    <form (ngSubmit)="onSubmit($event)">
+        <div class="control-field">
+            <lib-evil-phonenumber name="Jozsi" [(ngModel)]="phoneNumber"></lib-evil-phonenumber>
+        </div>
+        <div class="control-field">
+            <button class="button">Do something 🐈</button>
+        </div>
+    </form>
+    <div>The phone number is: {{phoneNumber}}</div>
+</div>
