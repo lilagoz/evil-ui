@@ -1,4 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   margin: 0;
+  background-color: #eed;
+}
+
+.content {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 1000px;
+  background-color: grey;
+  border-radius: 1rem;
+  border: 1px solid dimgray;
+  box-shadow: 0 0 20px #0008;
+}
+form {
+  .control-field {
+    margin-bottom: 1rem;
+  }
+}
+
+.button {
+  font-size: 2rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  //border: 2px solid pink;
+  border: none;
+  box-shadow: 0.5rem 0.5rem 1rem #f888;
+  border-radius: 0.5rem;
+  transition: box-shadow 500ms;
+  padding: 0.5rem 1rem;
+  color: #e73c7e;
+
+  &:hover {
+    box-shadow: 0.5rem 0.5rem 1rem #fff8;
+    transition: box-shadow 500ms;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

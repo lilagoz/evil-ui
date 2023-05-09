@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRouti
 import { ComponentLibraryModule } from 'component-library';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,12 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
   ],
-  imports: [BrowserModule, ComponentLibraryModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    ComponentLibraryModule,
+    AppRoutingModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
