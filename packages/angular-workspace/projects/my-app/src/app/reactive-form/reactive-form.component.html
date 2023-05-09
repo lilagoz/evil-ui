@@ -1,12 +1,12 @@
 <div class="content">
     <h1>Reactive form</h1>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
         <div class="control-field">
-            <lib-evil-phonenumber name="Jozsi"></lib-evil-phonenumber>
+            <lib-evil-phonenumber formControlName="phoneNumber"></lib-evil-phonenumber>
         </div>
         <div class="control-field">
             <button class="button">Do something 🐈</button>
         </div>
     </form>
-    <div>The phone number is:</div>
+    <div>The form value is: {{this.form.value | json}}</div>
 </div>
