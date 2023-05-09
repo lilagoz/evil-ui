@@ -1,16 +1,12 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { DIRECTIVES } from './stencil-generated';
 import { defineCustomElements } from 'stencil-library/loader';
+import { EvilPhonenumberComponent } from './evil-phonenumber/evil-phonenumber.component';
 
 @NgModule({
-  declarations: [
-    ...DIRECTIVES
-  ],
-  imports: [
-  ],
-  exports: [
-    ...DIRECTIVES
-  ],
+  declarations: [...DIRECTIVES, EvilPhonenumberComponent],
+  imports: [],
+  exports: [...DIRECTIVES, EvilPhonenumberComponent],
   providers: [
     {
       provide: APP_INITIALIZER,
@@ -18,7 +14,6 @@ import { defineCustomElements } from 'stencil-library/loader';
         return defineCustomElements();
       },
     },
-  ]
-
+  ],
 })
-export class ComponentLibraryModule { }
+export class ComponentLibraryModule {}

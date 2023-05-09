@@ -1,4 +1,4 @@
-import { Component, Host, h, State, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, State, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   tag: 'evil-phonenumber-input',
@@ -7,8 +7,10 @@ import { Component, Host, h, State, Event, EventEmitter } from '@stencil/core';
 })
 export class EvilPhonenumberInput {
   @State() numbers: Array<string> = new Array<string>(null, '00', '000', '00', '00');
-  @State() value: string;
-  // @Event() valueChange: EventEmitter<string>;
+  @State() phoneNumber: string;
+
+  // @Prop({ mutable: true }) value: string;
+  // @Event() valueChange: EventEmitter;
 
   @Event({
     // eventName: 'EvilPhonenumberInputChange',
@@ -22,10 +24,12 @@ export class EvilPhonenumberInput {
     console.debug('evil-phonenumber-input onChangeHandler', e.detail, position);
     this.numbers[position] = e.detail;
     if (this.numbers.every(i => i)) {
-      this.value = `${this.numbers[0]}(${this.numbers[1]})${this.numbers[2]}-${this.numbers[3]}-${this.numbers[4]}`;
-      console.debug('evil-phonenumber-input valueChange will fire', this.value);
-      this.change.emit(this.value);
-      console.debug('evil-phonenumber-input valueChange fired', this.value);
+      this.phoneNumber = `${this.numbers[0]}(${this.numbers[1]})${this.numbers[2]}-${this.numbers[3]}-${this.numbers[4]}`;
+      console.debug('evil-phonenumber-input valueChange will fire', this.phoneNumber);
+      this.change.emit(this.phoneNumber);
+      // this.value = this.phoneNumber;
+      // this.valueChange.emit(this.phoneNumber);
+      console.debug('evil-phonenumber-input valueChange fired', this.phoneNumber);
     }
   }
 
@@ -40,7 +44,10 @@ export class EvilPhonenumberInput {
         <number-dropdown-input itemNumber={1000} onChange={e => this.onChangeHandler(e, 2)}></number-dropdown-input>
         <number-dropdown-input itemNumber={100} onChange={e => this.onChangeHandler(e, 3)}></number-dropdown-input>
         <number-dropdown-input itemNumber={100} onChange={e => this.onChangeHandler(e, 4)}></number-dropdown-input>
-        <pre style={{ color: '#8f8' }}>evil-phonenumber-input: {this.value}</pre>
+        <pre style={{ color: '#8f8' }}>
+          <p>modify the country code</p>
+          <p>evil-phonenumber-input: {this.phoneNumber}</p>
+        </pre>
       </Host>
     );
   }
