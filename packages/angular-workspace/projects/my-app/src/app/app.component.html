@@ -1,5 +1,5 @@
 <ul>
-    <li><a routerLink="reactive-form">reactive form</a></li>
-    <li><a routerLink="template-driven-form">template driven form</a></li>
+    <li [ngClass]="{active: activeMenu==='/reactive-form'}"><a routerLink="reactive-form" >reactive form</a></li>
+    <li [ngClass]="{active: activeMenu==='/template-driven-form'}"><a routerLink="template-driven-form">template driven form</a></li>
 </ul>
 <router-outlet></router-outlet>
