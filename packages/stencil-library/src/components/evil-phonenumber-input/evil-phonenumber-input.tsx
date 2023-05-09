@@ -1,4 +1,4 @@
-import { Component, Host, h, State, Event, EventEmitter, Prop } from '@stencil/core';
+import { Component, Host, h, State, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'evil-phonenumber-input',
