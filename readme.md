@@ -1,10 +1,14 @@
 # Run
 
+https://stenciljs.com/docs/angular
+
 ## working on angular
 
 ### /packages/angular-workspace
 
-`npm run watch component-library`
+`npm run watch component-library`\
+or\
+`npx -p @angular/cli ng build component-library`
 
 another terminal:
 
