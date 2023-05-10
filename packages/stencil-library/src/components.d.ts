@@ -10,6 +10,8 @@ export namespace Components {
     }
     interface EzInput {
     }
+    interface FooBar {
+    }
     interface MyComponent {
     }
     interface NumberDropdownInput {
@@ -39,6 +41,12 @@ declare global {
         prototype: HTMLEzInputElement;
         new (): HTMLEzInputElement;
     };
+    interface HTMLFooBarElement extends Components.FooBar, HTMLStencilElement {
+    }
+    var HTMLFooBarElement: {
+        prototype: HTMLFooBarElement;
+        new (): HTMLFooBarElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -54,6 +62,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "evil-phonenumber-input": HTMLEvilPhonenumberInputElement;
         "ez-input": HTMLEzInputElement;
+        "foo-bar": HTMLFooBarElement;
         "my-component": HTMLMyComponentElement;
         "number-dropdown-input": HTMLNumberDropdownInputElement;
     }
@@ -63,6 +72,8 @@ declare namespace LocalJSX {
         "onChange"?: (event: EvilPhonenumberInputCustomEvent<string>) => void;
     }
     interface EzInput {
+    }
+    interface FooBar {
     }
     interface MyComponent {
     }
@@ -75,6 +86,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "evil-phonenumber-input": EvilPhonenumberInput;
         "ez-input": EzInput;
+        "foo-bar": FooBar;
         "my-component": MyComponent;
         "number-dropdown-input": NumberDropdownInput;
     }
@@ -85,6 +97,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "evil-phonenumber-input": LocalJSX.EvilPhonenumberInput & JSXBase.HTMLAttributes<HTMLEvilPhonenumberInputElement>;
             "ez-input": LocalJSX.EzInput & JSXBase.HTMLAttributes<HTMLEzInputElement>;
+            "foo-bar": LocalJSX.FooBar & JSXBase.HTMLAttributes<HTMLFooBarElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "number-dropdown-input": LocalJSX.NumberDropdownInput & JSXBase.HTMLAttributes<HTMLNumberDropdownInputElement>;
         }

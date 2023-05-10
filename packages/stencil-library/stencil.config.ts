@@ -21,14 +21,14 @@ export const config: Config = {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
+    reactOutputTarget({
+      componentCorePackage: 'stencil-library',
+      proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
+    }),
     angularOutputTarget({
       componentCorePackage: 'stencil-library',
       directivesProxyFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts',
       directivesArrayFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/index.ts',
-    }),
-    reactOutputTarget({
-      componentCorePackage: 'stencil-library',
-      proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
     }),
   ],
   plugins: [

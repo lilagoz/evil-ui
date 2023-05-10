@@ -1,16 +1,12 @@
 import "./App.css";
-import { MyComponent } from "react-library";
+import { defineCustomElements, EvilPhonenumberInput } from "react-library";
 
 function App() {
-  // const [count, setCount] = useState(0);
+  defineCustomElements();
 
   return (
     <>
-      <h1>ez</h1>
-      <MyComponent>
-        tartalom...<slot name={"header"}>bigyo</slot>
-      </MyComponent>
-      <p>?</p>
+      <EvilPhonenumberInput></EvilPhonenumberInput>
     </>
   );
 }
