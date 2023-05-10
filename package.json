@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@stencil/react-output-target": "^0.5.0",
     "@types/node": "^18.16.3",
     "lerna": "^6.6.1",
     "prettier": "2.8.8",
