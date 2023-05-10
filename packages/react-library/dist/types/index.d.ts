@@ -1,6 +1,0 @@
-/// <reference types="react" />
-import type { JSX } from 'stencil-library';
-export declare const EvilPhonenumberInput: import("react").ForwardRefExoticComponent<JSX.EvilPhonenumberInput & Omit<import("react").HTMLAttributes<HTMLEvilPhonenumberInputElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLEvilPhonenumberInputElement>>;
-export declare const EzInput: import("react").ForwardRefExoticComponent<JSX.EzInput & Omit<import("react").HTMLAttributes<HTMLEzInputElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLEzInputElement>>;
-export declare const MyComponent: import("react").ForwardRefExoticComponent<JSX.MyComponent & Omit<import("react").HTMLAttributes<HTMLMyComponentElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyComponentElement>>;
-export declare const NumberDropdownInput: import("react").ForwardRefExoticComponent<JSX.NumberDropdownInput & Omit<import("react").HTMLAttributes<HTMLNumberDropdownInputElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLNumberDropdownInputElement>>;

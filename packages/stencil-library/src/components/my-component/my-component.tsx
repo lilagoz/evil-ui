@@ -17,11 +17,7 @@ export class MyComponent {
     return (
       <Host class="outer">
         <div class="inner">
-          <slot name={'header'} />
-          <slot />
-          <evil-phonenumber-input onChange={e => this.phoneNumberChanged(e)}>Phone number</evil-phonenumber-input>
-          <pre style={{ color: '#f88' }}>my-component phone number: {this.phoneNumber}</pre>
-          <slot name={'footer'} />
+          <h1>my-component kutyamokus</h1>
         </div>
       </Host>
     );
