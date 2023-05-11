@@ -38,7 +38,7 @@ export class NumberDropdownInput {
     return (
       <Host>
         {this.items && (
-          <select onChange={(e: any) => this.onChangeHandler(e.target.value)}>
+          <select class={'select'} onChange={(e: any) => this.onChangeHandler(e.target.value)}>
             {this.items.map(item => (
               <option>{item}</option>
             ))}

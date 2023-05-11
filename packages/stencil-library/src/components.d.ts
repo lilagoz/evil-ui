@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface EvilPhonenumberInput {
+        "debug"?: boolean;
     }
     interface EzInput {
     }
@@ -18,6 +19,9 @@ export namespace Components {
         "itemNumber": number;
         "itemPrefix": string;
         "value": string;
+    }
+    interface SizeableWindow {
+        "windowTitle": string;
     }
 }
 export interface EvilPhonenumberInputCustomEvent<T> extends CustomEvent<T> {
@@ -59,16 +63,24 @@ declare global {
         prototype: HTMLNumberDropdownInputElement;
         new (): HTMLNumberDropdownInputElement;
     };
+    interface HTMLSizeableWindowElement extends Components.SizeableWindow, HTMLStencilElement {
+    }
+    var HTMLSizeableWindowElement: {
+        prototype: HTMLSizeableWindowElement;
+        new (): HTMLSizeableWindowElement;
+    };
     interface HTMLElementTagNameMap {
         "evil-phonenumber-input": HTMLEvilPhonenumberInputElement;
         "ez-input": HTMLEzInputElement;
         "foo-bar": HTMLFooBarElement;
         "my-component": HTMLMyComponentElement;
         "number-dropdown-input": HTMLNumberDropdownInputElement;
+        "sizeable-window": HTMLSizeableWindowElement;
     }
 }
 declare namespace LocalJSX {
     interface EvilPhonenumberInput {
+        "debug"?: boolean;
         "onChange"?: (event: EvilPhonenumberInputCustomEvent<string>) => void;
     }
     interface EzInput {
@@ -83,12 +95,16 @@ declare namespace LocalJSX {
         "onChange"?: (event: NumberDropdownInputCustomEvent<string>) => void;
         "value"?: string;
     }
+    interface SizeableWindow {
+        "windowTitle"?: string;
+    }
     interface IntrinsicElements {
         "evil-phonenumber-input": EvilPhonenumberInput;
         "ez-input": EzInput;
         "foo-bar": FooBar;
         "my-component": MyComponent;
         "number-dropdown-input": NumberDropdownInput;
+        "sizeable-window": SizeableWindow;
     }
 }
 export { LocalJSX as JSX };
@@ -100,6 +116,7 @@ declare module "@stencil/core" {
             "foo-bar": LocalJSX.FooBar & JSXBase.HTMLAttributes<HTMLFooBarElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "number-dropdown-input": LocalJSX.NumberDropdownInput & JSXBase.HTMLAttributes<HTMLNumberDropdownInputElement>;
+            "sizeable-window": LocalJSX.SizeableWindow & JSXBase.HTMLAttributes<HTMLSizeableWindowElement>;
         }
     }
 }

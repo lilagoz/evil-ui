@@ -1,4 +1,4 @@
-import { Component, Host, h, State, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, State, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   tag: 'evil-phonenumber-input',
@@ -8,6 +8,8 @@ import { Component, Host, h, State, Event, EventEmitter } from '@stencil/core';
 export class EvilPhonenumberInput {
   @State() numbers: Array<string> = new Array<string>(null, '00', '000', '00', '00');
   @State() phoneNumber: string;
+
+  @Prop() debug?: boolean = false;
 
   // @Prop({ mutable: true }) value: string;
   // @Event() valueChange: EventEmitter;
@@ -44,10 +46,12 @@ export class EvilPhonenumberInput {
         <number-dropdown-input itemNumber={1000} onChange={e => this.onChangeHandler(e, 2)}></number-dropdown-input>
         <number-dropdown-input itemNumber={100} onChange={e => this.onChangeHandler(e, 3)}></number-dropdown-input>
         <number-dropdown-input itemNumber={100} onChange={e => this.onChangeHandler(e, 4)}></number-dropdown-input>
-        <pre style={{ color: '#8f8' }}>
-          <p>modify the country code</p>
-          <p>evil-phonenumber-input: {this.phoneNumber}</p>
-        </pre>
+        {!this.phoneNumber && <p>modify the country code</p>}
+        {this.debug && (
+          <pre style={{ color: '#8f8' }}>
+            <p>evil-phonenumber-input: {this.phoneNumber}</p>
+          </pre>
+        )}
       </Host>
     );
   }
