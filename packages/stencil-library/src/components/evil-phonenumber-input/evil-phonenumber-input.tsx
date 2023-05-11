@@ -10,17 +10,10 @@ export class EvilPhonenumberInput {
   @State() phoneNumber: string;
 
   @Prop() debug?: boolean = false;
+  @Prop() name?: string;
 
-  // @Prop({ mutable: true }) value: string;
-  // @Event() valueChange: EventEmitter;
-
-  @Event({
-    // eventName: 'EvilPhonenumberInputChange',
-    // cancelable: true,
-    composed: false,
-    // bubbles: false,
-  })
-  change: EventEmitter<string>;
+  @Prop({ mutable: true }) value: string;
+  @Event() valueChange: EventEmitter;
 
   onChangeHandler(e: any, position: number) {
     console.debug('evil-phonenumber-input onChangeHandler', e.detail, position);
@@ -28,16 +21,15 @@ export class EvilPhonenumberInput {
     if (this.numbers.every(i => i)) {
       this.phoneNumber = `${this.numbers[0]}(${this.numbers[1]})${this.numbers[2]}-${this.numbers[3]}-${this.numbers[4]}`;
       console.debug('evil-phonenumber-input valueChange will fire', this.phoneNumber);
-      this.change.emit(this.phoneNumber);
-      // this.value = this.phoneNumber;
-      // this.valueChange.emit(this.phoneNumber);
+      this.value = this.phoneNumber;
+      this.valueChange.emit(this.phoneNumber);
       console.debug('evil-phonenumber-input valueChange fired', this.phoneNumber);
     }
   }
 
   render() {
     return (
-      <Host>
+      <Host name={this.name}>
         <label>
           <slot></slot>
         </label>

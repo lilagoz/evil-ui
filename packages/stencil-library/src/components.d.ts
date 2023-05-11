@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface EvilPhonenumberInput {
         "debug"?: boolean;
+        "name"?: string;
+        "value": string;
     }
     interface EzInput {
     }
@@ -81,7 +83,9 @@ declare global {
 declare namespace LocalJSX {
     interface EvilPhonenumberInput {
         "debug"?: boolean;
-        "onChange"?: (event: EvilPhonenumberInputCustomEvent<string>) => void;
+        "name"?: string;
+        "onValueChange"?: (event: EvilPhonenumberInputCustomEvent<any>) => void;
+        "value"?: string;
     }
     interface EzInput {
     }

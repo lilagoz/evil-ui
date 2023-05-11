@@ -5,11 +5,20 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type      | Default     |
+| -------- | --------- | ----------- | --------- | ----------- |
+| `debug`  | `debug`   |             | `boolean` | `false`     |
+| `name`   | `name`    |             | `string`  | `undefined` |
+| `value`  | `value`   |             | `string`  | `undefined` |
+
+
 ## Events
 
-| Event    | Description | Type                  |
-| -------- | ----------- | --------------------- |
-| `change` |             | `CustomEvent<string>` |
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `valueChange` |             | `CustomEvent<any>` |
 
 
 ## Dependencies

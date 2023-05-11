@@ -8,27 +8,28 @@ import { Components } from 'stencil-library';
 
 
 @ProxyCmp({
+  inputs: ['debug', 'name', 'value']
 })
 @Component({
   selector: 'evil-phonenumber-input',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['debug', 'name', 'value'],
 })
 export class EvilPhonenumberInput {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['change']);
+    proxyOutputs(this, this.el, ['valueChange']);
   }
 }
 
 
 export declare interface EvilPhonenumberInput extends Components.EvilPhonenumberInput {
 
-  change: EventEmitter<CustomEvent<string>>;
+  valueChange: EventEmitter<CustomEvent<any>>;
 }
 
 
@@ -119,5 +120,27 @@ export declare interface NumberDropdownInput extends Components.NumberDropdownIn
 
   change: EventEmitter<CustomEvent<string>>;
 }
+
+
+@ProxyCmp({
+  inputs: ['windowTitle']
+})
+@Component({
+  selector: 'sizeable-window',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['windowTitle'],
+})
+export class SizeableWindow {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SizeableWindow extends Components.SizeableWindow {}
 
 

@@ -6,5 +6,6 @@ export const DIRECTIVES = [
   d.EzInput,
   d.FooBar,
   d.MyComponent,
-  d.NumberDropdownInput
+  d.NumberDropdownInput,
+  d.SizeableWindow
 ];
