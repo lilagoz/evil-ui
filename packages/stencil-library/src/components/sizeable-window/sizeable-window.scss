@@ -11,20 +11,63 @@
 
   .sizeable-window {
     //margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
+    display: grid;
+    grid-template-columns: [left] 10px [content] auto [right] 10px;
+    grid-template-rows: [header] 30px [content] auto [bottom] 10px;
+
     position: absolute;
     background-color: #e8eaed;
     border-radius: 10px;
     box-shadow: 0 0 40px #0002, 0 0 30px #0002, 0 0 20px #0001;
 
-    .header {
+    .window-content {
+      //background-color: #23d5ab;
+      grid-column: content;
+      grid-row: content;
+    }
+    .window-sizer-left {
+      //background-color: #e73c7e;
+      grid-column: left;
+      grid-row: content;
+      cursor: ew-resize;
+    }
+    .window-sizer-right {
+      //background-color: firebrick;
+      grid-column: right;
+      grid-row: content;
+      cursor: ew-resize;
+    }
+    .window-sizer-bottom {
+      //background-color: blue;
+      grid-column: content;
+      grid-row: bottom;
+      cursor: ns-resize;
+    }
+    .window-sizer-left-bottom {
+      //background-color: olive;
+      grid-column: left;
+      grid-row: bottom;
+      cursor: nesw-resize;
+    }
+    .window-sizer-right-bottom {
+      //background-color: olive;
+      grid-column: right;
+      grid-row: bottom;
+      cursor: nwse-resize;
+    }
+
+    .window-header {
+      //background-color: pink;
       position: relative;
-      height: 30px;
+      grid-column: left / span 3;
+      grid-row: header;
+
       display: flex;
+
       flex-direction: row;
       align-items: center;
-      //background-color: #23d5ab;
       padding: 0 18px;
 
       .header-button {
