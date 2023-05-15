@@ -8,12 +8,14 @@ import { ComponentLibraryModule } from 'component-library';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlmafaComponent } from './almafa/almafa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
+    AlmafaComponent,
   ],
   imports: [
     BrowserModule,
