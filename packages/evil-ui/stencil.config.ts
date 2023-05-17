@@ -4,7 +4,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'stencil-library',
+  namespace: 'evil-ui',
   outputTargets: [
     {
       type: 'dist-custom-elements',
@@ -22,11 +22,11 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     reactOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'evil-ui',
       proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
     }),
     angularOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'evil-ui',
       directivesProxyFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts',
       directivesArrayFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/index.ts',
     }),
