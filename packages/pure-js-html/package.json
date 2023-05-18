@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
     "webpack-cli": "^5.1.1"
   }
 }
