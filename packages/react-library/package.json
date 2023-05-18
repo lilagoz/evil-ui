@@ -1,8 +1,9 @@
 {
-  "name": "react-library",
-  "version": "0.0.0",
+  "name": "@lilagoz/react-library",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Gabor Kiacz <info@lilagoz.hu>",
+  "private": false,
   "homepage": "https://github.com/lilagoz/evil-ui#readme",
   "license": "ISC",
   "main": "dist/index.js",
@@ -40,7 +41,7 @@
     "access": "public"
   },
   "dependencies": {
-    "stencil-library": "*"
+    "@lilagoz/evil-ui": "*"
   }
 
 }

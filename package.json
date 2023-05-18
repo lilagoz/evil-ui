@@ -4,6 +4,11 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "build": "lerna run build",
+    "build:stencil": "lerna run build --scope=@lilagoz/evil-ui",
+    "build:angular": "lerna run build --scope=angular-workspace"
+  },
   "devDependencies": {
     "@stencil/react-output-target": "^0.5.0",
     "@types/node": "^18.16.3",

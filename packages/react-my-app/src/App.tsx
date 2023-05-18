@@ -3,7 +3,7 @@ import {
   defineCustomElements,
   EvilPhonenumber,
   SizeableWindow,
-} from "react-library";
+} from "@lilagoz/react-library";
 import { Field, Form, Formik } from "formik";
 
 function App() {

@@ -22,11 +22,11 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     reactOutputTarget({
-      componentCorePackage: 'evil-ui',
+      componentCorePackage: '@lilagoz/evil-ui',
       proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
     }),
     angularOutputTarget({
-      componentCorePackage: 'evil-ui',
+      componentCorePackage: '@lilagoz/evil-ui',
       directivesProxyFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts',
       directivesArrayFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/index.ts',
     }),
