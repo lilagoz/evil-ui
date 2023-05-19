@@ -7,7 +7,8 @@
   "scripts": {
     "build": "lerna run build",
     "build:stencil": "lerna run build --scope=@lilagoz/evil-ui",
-    "build:angular": "lerna run build --scope=angular-workspace"
+    "build:angular": "lerna run build --scope=angular-workspace",
+    "build:vue": "lerna run build --scope=@lilagoz/vue-library"
   },
   "devDependencies": {
     "@stencil/react-output-target": "^0.5.0",

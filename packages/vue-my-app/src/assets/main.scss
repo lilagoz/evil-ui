@@ -1,0 +1,40 @@
+@import './base.scss';
+
+#app {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+
+  .wrapper {
+    //display: flex;
+    //justify-items: center;
+  }
+
+  nav {
+    a {
+      margin: 0 1em;
+    }
+    a:first-child {
+      margin-left: 0;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+}
+
+
